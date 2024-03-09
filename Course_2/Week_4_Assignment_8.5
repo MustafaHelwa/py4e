@@ -1,0 +1,23 @@
+fname = input("Enter file name: ")
+
+if len(fname) < 1:
+    fname = "mbox-short.txt"
+
+fh = open(fname)
+
+emaillist = list()
+count = 0
+
+for lines in fh:
+    if "From " in lines:
+        count = count +1
+        email = lines.split()
+        emaillist.append(email[1].rstrip())
+    else:
+        continue
+        
+        
+for emails in emaillist:
+    print(emails)
+    
+print("There were", count, "lines in the file with From as the first word")
