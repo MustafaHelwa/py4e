@@ -1,9 +1,8 @@
 import urllib.request, urllib.parse, urllib.error
 import xml.etree.ElementTree as ET
 
-serviceurl = 'http://py4e-data.dr-chuck.net/comments_1992834.xml'
-
 url = input('Enter location: ')
+# URL: http://py4e-data.dr-chuck.net/comments_1992834.xml
 
 print('Retrieving', url)
 uh = urllib.request.urlopen(url)
